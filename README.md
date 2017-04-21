@@ -10,7 +10,7 @@ result would become:
 
 ```
 {
-    b: 'a'
+    b: 'a',
     c: 'a',
     f: 'e'
 }
