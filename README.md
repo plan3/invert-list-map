@@ -15,3 +15,24 @@ result would become:
     f: 'e'
 }
 ```
+
+## Conflicts resolution
+
+By default the call:
+
+```
+require('invert-list-map')({a: ['b'], c: ['b']});
+```
+
+will result in a conflict and failure to invert the map. You can override that behaviour, by calling: 
+
+```
+require('invert-list-map', false)({a: ['b'], c: ['b']});
+```
+
+this will produce:
+```
+{
+    b: ['a', 'c']
+}
+```
